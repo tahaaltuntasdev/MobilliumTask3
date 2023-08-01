@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MobilliumTask3</string>
+
+    <string name="zero">0</string>
+    <string name="counter_action">Increase Counter</string>
+    <string name="viewModel_switch">Use ViewModel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="new_game">New Game</string>
+    <string name="guess">Guess</string>
+    <string name="guess_number">Guess The Number</string>
+
+</resources>
