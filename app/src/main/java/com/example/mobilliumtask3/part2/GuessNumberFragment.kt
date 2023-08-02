@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.mobilliumtask3.databinding.FragmentGuessNumberBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -28,6 +29,7 @@ class GuessNumberFragment : Fragment() {
         binding = FragmentGuessNumberBinding.inflate(inflater)
         uiView()
         viewModel.randomValues()
+        toDeailFragment()
         return binding.root
     }
 
@@ -77,6 +79,14 @@ class GuessNumberFragment : Fragment() {
             snack.show()
             binding.guessNumberEdittxt.text.clear()
 
+        }
+    }
+
+    private fun toDeailFragment() = with(binding) {
+        guessNumber.setOnClickListener {
+            findNavController().navigate(GuessNumberFragmentDirections
+                .actionGuessNumberFragmentToDetailFragment(viewModel.getNumber())
+            )
         }
     }
 

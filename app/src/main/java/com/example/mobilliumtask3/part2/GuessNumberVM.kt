@@ -6,11 +6,14 @@ import androidx.lifecycle.ViewModel
 
 class GuessNumberVM: ViewModel() {
     private val _randomNumber = MutableLiveData<Int>()
-
+    val number: LiveData<Int> = _randomNumber
 
     fun randomValues() {
-
         _randomNumber.value = (0..9).random()
+    }
+
+    fun getNumber(): String{
+        return _randomNumber.value.toString()
     }
 
 
